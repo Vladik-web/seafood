@@ -9,3 +9,42 @@
     padding-top: 40px;
   }
 }
+@media screen and (max-width: 1023px) {
+  .footer {
+    &__inner {
+      gap: 30px;
+      align-items: flex-start;
+    }
+    &__logo {
+    }
+    &__nav {
+      padding-top: 0;
+      .nav {
+        &__list {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 590px) {
+  .footer {
+    margin-bottom: 50px;
+    &__inner {
+      margin-top: 100px;
+
+      flex-direction: column;
+      align-items: center;
+    }
+    &__nav {
+      .nav {
+        &__list {
+          justify-content: center;
+        }
+      }
+    }
+    &__logo {
+      display: none;
+    }
+  }
+}

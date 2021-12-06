@@ -41,3 +41,26 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .advantages {
+    padding-top: 41px;
+    &::before {
+      content: none;
+    }
+    &__list {
+      flex-wrap: wrap;
+      row-gap: 50px;
+    }
+    &__item {
+      flex: 0 1 50%;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .advantages {
+    &__item {
+      flex: 0 1 100%;
+    }
+  }
+}

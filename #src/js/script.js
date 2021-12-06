@@ -49,7 +49,8 @@ var header = new Swiper(".header-slider", {
 			allowTouchMove: false,
 		},
 		600:{
-			allowTouchMove: true
+			allowTouchMove: true,
+			
 		},
 
 	}

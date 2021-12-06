@@ -161,7 +161,6 @@
       max-width: 100%;
       flex-direction: row;
       margin: 0;
-      display: none;
     }
     .down,
     .up {
@@ -176,6 +175,7 @@
       }
     }
     &__right {
+      margin: 50px 0;
       max-width: 100%;
     }
   }
@@ -190,6 +190,9 @@
   .main-slider {
     margin-bottom: 50px;
     button {
+      display: none;
+    }
+    &__left {
       display: none;
     }
     &__list {
