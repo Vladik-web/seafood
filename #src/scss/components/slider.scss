@@ -1,0 +1,114 @@
+.slider {
+  display: flex;
+  align-items: center;
+  padding-bottom: 80px;
+
+  &__left {
+    margin: 0 50px 0 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__btn {
+  }
+  &__numbers {
+    padding: 40px 0;
+  }
+  &__list {
+    li {
+      color: $white;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 300;
+      opacity: 0.5;
+      margin-bottom: 30px;
+      &.active {
+        opacity: 1;
+      }
+    }
+    li:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    li.swiper-pagination-bullet {
+      transform: scale(1);
+      color: #fff;
+      opacity: 0.5;
+      border-radius: 0;
+      background-color: transparent;
+    }
+    li.swiper-pagination-bullet-active {
+      opacity: 1;
+      color: $white;
+      line-height: 28px;
+    }
+  }
+  &__right {
+    overflow: hidden;
+    max-width: 407px;
+    max-height: 320px;
+  }
+  &__text {
+    font-family: "Roboto Slab";
+    color: $white;
+    font-size: 18px;
+    font-weight: thin;
+    line-height: 120%;
+    max-width: 400px;
+    p + p {
+      margin-top: 15px;
+    }
+    margin-bottom: 40px;
+  }
+  &__choose {
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: 24px;
+    width: 300px;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    background-color: rgba($white, 0.5);
+    border-radius: 20px;
+    color: $white;
+  }
+  &__lang {
+    flex: 1 1 auto;
+    align-self: flex-end;
+
+    display: flex;
+    justify-content: end;
+    font-style: normal;
+
+    font-size: 18px;
+    line-height: 21px;
+
+    align-items: center;
+    color: $white;
+  }
+  &__lg {
+    color: $white;
+    text-transform: uppercase;
+    &.active {
+      font-weight: bold;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.btn-prev {
+}
+.btn-next {
+}
+.swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical > .swiper-pagination-bullets {
+  transform: translate3d(0, 0, 0);
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets
+  .swiper-pagination-bullet:not(:last-child) {
+  margin-bottom: 30px;
+}

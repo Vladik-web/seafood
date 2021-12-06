@@ -1,0 +1,152 @@
+.main-slider {
+  position: relative;
+
+  margin-top: 100px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__left {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 88px;
+  }
+  &__right {
+    max-width: 600px;
+    background-color: $white;
+    overflow: hidden;
+  }
+  &__image {
+    width: 260px;
+    img {
+      width: 100%;
+    }
+  }
+  &__list {
+    padding: 30px 0;
+    li {
+      cursor: pointer;
+      font-family: "Roboto Slab", sans-serif;
+      font-size: 24px;
+      line-height: 32px;
+      color: $black;
+      transition: transform 0.25s ease;
+
+      &.active {
+        color: $blue;
+        font-size: 36px;
+        line-height: 47px;
+        font-weight: bold;
+      }
+    }
+    li + li {
+      margin-top: 30px;
+    }
+  }
+  &__block:not(:last-child) {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__point {
+    margin-bottom: 30px;
+  }
+  &__text {
+    h3 {
+      font-family: "Roboto Slab", sans-serif;
+      color: $blue;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 10px;
+      &.big {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+    p {
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  &__more {
+    width: 300px;
+    height: 55px;
+    border: 1px solid $blue;
+    margin-top: 30px;
+    color: $blue;
+    font-family: "Roboto Slab", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    border-radius: 20px;
+  }
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.swiper-pagination-bullet {
+  display: block;
+  color: $blue;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  width: auto;
+  height: auto;
+  border-radius: none;
+  opacity: 1;
+  color: $black;
+  background: $white;
+  outline: none;
+  &.swiper-pagination-bullet-active {
+    font-weight: bold;
+    transform: scale(1.2);
+
+    color: $blue;
+  }
+}
+
+.fish-1 {
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  animation: go 2s ease alternate infinite backwards;
+}
+.fish-2 {
+  position: absolute;
+  transform: rotate(50deg);
+  right: 30px;
+  bottom: 30px;
+  animation: go 1.3s ease alternate infinite backwards;
+}
+.fish-3 {
+  position: absolute;
+  z-index: 10;
+  bottom: -100px;
+  left: 40%;
+  animation: go 4s ease alternate infinite backwards;
+}
+.fish-4 {
+  width: 100px;
+  animation: go 1s ease alternate infinite backwards;
+}
+
+@keyframes go {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}

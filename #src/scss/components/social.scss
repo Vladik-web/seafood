@@ -1,0 +1,13 @@
+.social {
+  padding-top: 40px;
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__item {
+    &:hover > a > svg > path {
+      fill: $blue;
+    }
+  }
+}

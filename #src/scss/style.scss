@@ -1,0 +1,48 @@
+@import "reset.scss";
+@import "vars.scss";
+@import "fonts.scss";
+@import "mixins.scss";
+body {
+  background-color: $white;
+  color: $black;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 120%;
+  font-family: serif;
+  font-family: "Roboto";
+}
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.title {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 120%;
+  color: #001e64;
+  margin-bottom: 30px;
+}
+
+.btn-reset {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+path {
+  transition: 0.2s ease;
+}
+@import "./components/header.scss";
+@import "./components/nav.scss";
+@import "./components/slider.scss";
+@import "./components/main-slider.scss";
+@import "./components/advantages.scss";
+@import "./components/about.scss";
+@import "./components/mountains.scss";
+@import "./components/social.scss";
+@import "./components/footer.scss";

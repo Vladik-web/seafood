@@ -1,0 +1,55 @@
+.about {
+  margin-bottom: 100px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+  &__left {
+    max-width: 420px;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+    &-title {
+      @include head;
+      margin-bottom: 30px;
+    }
+    &-text {
+      max-width: 420px;
+    }
+    &-text + &-text {
+      margin-top: 25px;
+    }
+    &-text + &-image {
+      margin-top: 50px;
+    }
+    &-image + &-title {
+      margin-top: 50px;
+    }
+  }
+  &__image {
+    img {
+      width: 100%;
+    }
+  }
+  &__right {
+    max-width: 600px;
+  }
+  &__bottom {
+    max-width: 800px;
+    margin: 0 auto;
+    &--text {
+      max-width: 600px;
+      margin: 0 auto;
+      font-family: "Roboto Slab", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      color: $black;
+    }
+  }
+}
