@@ -8,6 +8,10 @@ let buttons = [
 ];
 
 var swiper = new Swiper(".mySwiper", {
+	loop:true,
+	autoplay: {
+		delay: 1500,
+	},
   navigation: {
     nextEl: ".up",
     prevEl: ".down",
@@ -20,10 +24,13 @@ var swiper = new Swiper(".mySwiper", {
       return `<li class="${className}">${buttons[index]}</li>`;
     },
   },
+	
+	
 });
 
 var header = new Swiper(".header-slider", {
   direction: "vertical",
+	allowTouchMove: true,
   navigation: {
     nextEl: ".btn-next",
     prevEl: ".btn-prev",
@@ -35,7 +42,17 @@ var header = new Swiper(".header-slider", {
     renderBullet: function (index, className) {
       return `<li class="${className}">${"0" + (index + 1)}</li>`;
     },
+		
   },
+	breakpoints: {
+		0:{
+			allowTouchMove: false,
+		},
+		600:{
+			allowTouchMove: true
+		},
+
+	}
 });
 
 @@include('a.js');

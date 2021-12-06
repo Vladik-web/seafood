@@ -112,3 +112,74 @@
   .swiper-pagination-bullet:not(:last-child) {
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 768px) {
+  .slider {
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 20px;
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 590px) {
+  .slider {
+    &__wrapper {
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+    &__left {
+      margin: 0;
+      flex-direction: row;
+    }
+    &__numbers {
+      padding: 0 40px;
+    }
+    .btn-next {
+      transform: rotate(-90deg);
+    }
+    .btn-prev {
+      transform: rotate(-90deg);
+    }
+    &__list {
+      display: flex;
+      gap: 20px;
+    }
+    .swiper-pagination-vertical.swiper-pagination-bullets
+      .swiper-pagination-bullet {
+      margin: 0;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .slider {
+    &__text {
+      font-size: 16px;
+    }
+    &__wrapper {
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+    &__left {
+      margin: 0;
+      flex-direction: row;
+    }
+    &__numbers {
+      padding: 0 40px;
+    }
+    .btn-next {
+      transform: rotate(-90deg);
+    }
+    .btn-prev {
+      transform: rotate(-90deg);
+    }
+    &__list {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}

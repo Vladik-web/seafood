@@ -5,6 +5,9 @@
   }
   &__item {
   }
+  &__close {
+    display: none;
+  }
   &__link {
     font-weight: 500;
     font-size: 18px;
@@ -16,5 +19,40 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .header__nav {
+    .nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $white;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-100%);
+      transition: transform 0.25s ease;
+      &__close {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 27px;
+      }
+      &.active {
+        transform: translateY(0);
+      }
+      &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav {
   }
 }

@@ -10,6 +10,9 @@ body {
   line-height: 120%;
   font-family: serif;
   font-family: "Roboto";
+  &.active {
+    overflow: hidden;
+  }
 }
 .container {
   max-width: 1230px;
